@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.*;
 import java.io.*;
 
-public class multipliser
+public class hjelpemetoder_Arrayer
 {
   /*multipliserer to arrayer med hverandre.
   [0]*[0], [1]*[1], [2]*[2] osv*/
@@ -82,5 +82,19 @@ public class multipliser
       System.out.println(String.valueOf(true));
     }
     System.out.println("\n");
+  }
+
+  public static void finn_index_array(int[] a)
+  {
+    int index = 0;
+    int mål_nr = 7;
+
+    for(int i = 0; i < a.length;i++)
+    {
+      if(a[i] == 7)
+      {
+        System.out.println(a[i]);
+      }
+    }
   }
 }

@@ -5,12 +5,12 @@ import java.util.*;
 import java.io.*;
 //import org.apache.commons.lang.ArrayUtils;
 
-public class array_lek
+public class Arrayer
 {
   public static void main(String[] args)
   {
 
-    int[] data = {9,-20,0,30,40,60,8};
+    int[] data = {9,-20,0,30,7,40,60,8};
     int[] data2 = {0};
 
     int[] forste = {50,-20,0,30,40,60,12};
@@ -35,6 +35,7 @@ public class array_lek
 
     multi.multipliser_array(test,test3);
     multi.check_gruppe(gruppe);
+    multi.finn_index_array(data);
 
     forst_eller_sist(data);
     forst_samme_som_sist(data2);
