@@ -31,11 +31,12 @@ public class Arrayer
 
     int antall_rotasjoner = 1;
 
-    hjelpemetoder_Arrayer multi = new multipliser();
+    hjelpemetoder_Arrayer multi = new hjelpemetoder_Arrayer();
 
     multi.multipliser_array(test,test3);
     multi.check_gruppe(gruppe);
-    multi.finn_index_array(data);
+    System.out.println("Index-posisjonen til angitt nummer er: " + multi.finn_index_array(data,7));
+    multi.reverser_Array(forste,7);
 
     forst_eller_sist(data);
     forst_samme_som_sist(data2);
@@ -70,7 +71,7 @@ public class Arrayer
   //Sjekke om forste og siste indeksplass er lik
   public static void forst_samme_som_sist(int[] a)
   {
-    hjelpemetoder_Arrayer multi = new multipliser();
+    hjelpemetoder_Arrayer multi = new hjelpemetoder_Arrayer();
     int x = a.length;
 
     if(x >= 2 && (a[0] == a[a.length-1]))

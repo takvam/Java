@@ -84,17 +84,40 @@ public class hjelpemetoder_Arrayer
     System.out.println("\n");
   }
 
-  public static void finn_index_array(int[] a)
+  public static int finn_index_array(int[] a, int mål_nr)
   {
     int index = 0;
-    int mål_nr = 7;
 
     for(int i = 0; i < a.length;i++)
     {
-      if(a[i] == 7)
+      if(a[i] == mål_nr)
       {
-        System.out.println(a[i]);
+        return i;
       }
     }
+    return -1;
+  }
+
+  public static void reverser_Array(int[] gammel_array, int n)
+  {
+    //*Lager en ny array for å lagre reversert array i
+    //ny array fylles med antall indekser
+    int[] ny_array = new int[n];
+    int temp = n;
+
+    //loper gjennom antall indekser
+    for(int i = 0; i < n; i++)
+    {
+      //fyller ny array med gammel array og skifter paa posisjon
+      ny_array[temp -1] = gammel_array[i];
+      temp = temp -1;
+    }
+
+    System.out.println("Reversert array er: \n");
+    for(int j = 0; j < n; j++)
+    {
+      System.out.println(ny_array[j]);
+    }
+    System.out.println("\n");
   }
 }
