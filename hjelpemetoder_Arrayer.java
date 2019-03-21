@@ -120,4 +120,22 @@ public class hjelpemetoder_Arrayer
     }
     System.out.println("\n");
   }
+
+  public static void sjekke_talli_array(int[] a)
+  {
+    int index = 0;
+    for(int i = 0; i < a.length; i++)
+    {
+      if(a[i] % 2 == 0)
+      {
+
+        System.out.println("Tallet " + a[i] + " er et partall");
+      }
+      else
+      {
+        System.out.println("Tallet " + a[i] + " er et oddetall ");
+      }
+    }
+    System.out.println("\n");
+  }
 }

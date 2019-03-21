@@ -37,6 +37,7 @@ public class Arrayer
     multi.check_gruppe(gruppe);
     System.out.println("Index-posisjonen til angitt nummer er: " + multi.finn_index_array(data,7));
     multi.reverser_Array(forste,7);
+    multi.sjekke_talli_array(data);
 
     forst_eller_sist(data);
     forst_samme_som_sist(data2);
