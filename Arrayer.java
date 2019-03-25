@@ -39,6 +39,7 @@ public class Arrayer
     multi.reverser_Array(forste,7);
     multi.sjekke_talli_array(data);
 
+    merge_array(forste,test3);
     forst_eller_sist(data);
     forst_samme_som_sist(data2);
     teste_to_arrayer(forste, andre);
@@ -203,5 +204,19 @@ public class Arrayer
     {
       System.out.println("Arrayen er for kort ");
     }
+  }
+
+  public static void merge_array(int[] a, int[] b)
+  {
+    int forste = a.length;
+    int andre = b.length;
+    int [] ny_array = new int[forste + andre];
+
+    System.arraycopy(a, 0, ny_array, 0, forste);
+    System.arraycopy(b, 0, ny_array, forste, andre);
+
+    Arrays.sort(ny_array);
+    System.out.println("Ditt nye array: ");
+    System.out.println(Arrays.toString(ny_array));
   }
 }
