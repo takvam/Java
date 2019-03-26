@@ -38,6 +38,7 @@ public class Arrayer
     System.out.println("Index-posisjonen til angitt nummer er: " + multi.finn_index_array(data,7));
     multi.reverser_Array(forste,7);
     multi.sjekke_talli_array(data);
+    multi.string_array();
 
     merge_array(forste,test3);
     forst_eller_sist(data);

@@ -138,4 +138,29 @@ public class hjelpemetoder_Arrayer
     }
     System.out.println("\n");
   }
+
+  public static void string_array()
+  {
+    String[] array = {"Hei", "paa", "deg"};
+    int a = array.length;
+    String hei = "Hei";
+    int index = 0;
+    String deg = "deg";
+
+    for(int i = 0; i < array.length; i++)
+    {
+      if(array[i] == hei)
+      {
+        System.out.println("Posisjonen paa stringen er: ");
+        index = i;
+        System.out.println(index);
+      }
+      else if(array[i] == deg)
+      {
+        System.out.println("Posisjonen paa stringen er:  ");
+        index = i;
+        System.out.println(index);
+      }
+    }
+  }
 }
