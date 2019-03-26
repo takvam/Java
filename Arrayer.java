@@ -39,6 +39,8 @@ public class Arrayer
     multi.reverser_Array(forste,7);
     multi.sjekke_talli_array(data);
     multi.string_array();
+    multi.index_sorted_array(test4,40);
+    multi.finding_median_array(test4);
 
     merge_array(forste,test3);
     forst_eller_sist(data);

@@ -163,4 +163,36 @@ public class hjelpemetoder_Arrayer
       }
     }
   }
+
+  public static void index_sorted_array(int[] a, int b)
+  {
+    Arrays.sort(a);
+
+    int array = a.length;
+    int index = 0;
+
+    for(int i = 0; i < a.length; i++)
+    {
+      if(a[i] == b)
+      {
+        System.out.println("Posisjonen på arrayen med riktig måltall er: ");
+        index = i;
+        System.out.println(index);
+      }
+    }
+  }
+
+  public static void finding_median_array(int[] a)
+  {
+    int sum = 0;
+    int median = 0;
+
+    for(int i = 0; i < a.length; i++)
+    {
+      sum += a[i];
+      median = sum/2;
+    }
+    System.out.println("Summen er lik: " + sum);
+    System.out.println("Median er lik: " + median);
+  }
 }
