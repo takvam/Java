@@ -42,6 +42,12 @@ public class Arrayer
     multi.index_sorted_array(test4,40);
     multi.finding_median_array(test4);
 
+    test = multi.fjern_element_i_array(test, -3);
+    System.out.println("Nytt array etter å ha fjernet -3: " + Arrays.toString(test));
+
+    test3 = multi.legg_til_element_i_array(test3, 10);
+    System.out.println("Nytt array etter å ha lagt til 10: " + Arrays.toString(test3));
+
     merge_array(forste,test3);
     forst_eller_sist(data);
     forst_samme_som_sist(data2);

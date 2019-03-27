@@ -195,4 +195,38 @@ public class hjelpemetoder_Arrayer
     System.out.println("Summen er lik: " + sum);
     System.out.println("Median er lik: " + median);
   }
+
+  public static int[] fjern_element_i_array(int[] a, int element)
+  {
+    int index = 0;
+
+    for(int i = 0; i < a.length; i ++)
+    {
+      if(a[i] != element)
+      {
+        a[index++] = a[i];
+      }
+    }
+    //returnerer en kopi av den nye versjonen av int[] a
+    return Arrays.copyOf(a, index);
+  }
+
+  public static int[] legg_til_element_i_array(int[] a, int element)
+  {
+    /*Lager en ny array med en ekstra index.
+    Dette fordi når man lager en array så er legnden satt, denne kan ikke endres.
+    Lager vi derimot en ny array med int[] a som utgangspunkt, pluss 1 i lengde
+    vil det være mulig å legge til en ny element i arrayen.
+    */
+    int[] ny_array = new int[a.length + 1];
+
+    //kopierer elementene fra int[]a inn i ny_array
+    for(int i = 0; i < a.length; i++)
+    {
+      ny_array[i] = a[i];
+    }
+
+    ny_array[ny_array.length - 1] = element;
+    return ny_array;
+  }
 }
