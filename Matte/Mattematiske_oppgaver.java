@@ -14,7 +14,8 @@ public class Mattematiske_oppgaver
     double range_to = 2.0;
     System.out.println("Sjekker om tallene er innenfor 0 og 1: " + innenfor_range(range_en,range_to));
 
-    bytte_paa_index_2D();
+    int original_nummer = 2350;
+    System.out.println(not_bigger("Originalt nummer: " + original_nummer));
   }
 
   //Sjekker om alle verdiene er like
@@ -43,30 +44,25 @@ public class Mattematiske_oppgaver
     }
   }
 
-  public static void bytte_paa_index_2D()
+  public static int not_bigger(int original_nummer)
   {
-    boolean[][] a = {{true, false, true},{false, true, false}};
-    int rader = a.length;
-    int kolonne = a[0].length;
+    int shift_mot_hoyre = 0;
 
-    for(int i = 0; i < rader; i++)
-    {
-      for(int j = 0; j < kolonne; j++)
-      {
-        if(a[i][j])
-        {
-          System.out.println("t");
-        }
-        else
-        {
-          System.out.println("f");
-        }
-      }
+    do{
+      /* Dette er en "right shift", den skifter en bit-rad til høyre.
+      2350 er binært: 100100101110, etter en shift blir det følgende:
+      010010010111 = 1175 */
+      original_nummer >>= 1;
+      shift_mot_hoyre++;
     }
-    System.out.println("");
-
+    /* Så lenge original_nummer(som var 2350) er større enn 0,
+    etterhvert som vi right shifter nedover, så vil int shift_mot_høyre plusses med 1.*/
+    while(original_nummer != 0);
+    {
+      /*I det oyeblikket original_nummer ikke er større enn 0, trekker vi en i fra på
+      shift_mot_hoyre og returnerer resultatet*/
+      shift_mot_hoyre--;
+      return shift_mot_hoyre;
+    }
   }
-
-
-
 }
