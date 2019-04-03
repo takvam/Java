@@ -15,7 +15,7 @@ public class Mattematiske_oppgaver
     System.out.println("Sjekker om tallene er innenfor 0 og 1: " + innenfor_range(range_en,range_to));
 
     int original_nummer = 2350;
-    System.out.println(not_bigger("Originalt nummer: " + original_nummer));
+    System.out.println("Nytt nummer etter right_shift: " + not_bigger(original_nummer));
   }
 
   //Sjekker om alle verdiene er like
