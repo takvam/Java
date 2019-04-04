@@ -16,9 +16,6 @@ public class Euclids_algoritme
 {
   public static void main(String[] args)
   {
-    int y = 4;
-    int x = 2;
-    System.out.println(y%x);
 
     Scanner scanner = new Scanner(System.in);
     System.out.println("Skriv inn første tall til Euclids algoritme: " );
@@ -26,7 +23,7 @@ public class Euclids_algoritme
     System.out.println("Skriv inn andre tall til Euclids algoritme: " );
     int andre_tall = scanner.nextInt();
 
-    System.out.println(Eulids_find_GCD(første_tall,andre_tall));
+    System.out.println("Største fellesnevner: " + Eulids_find_GCD(første_tall,andre_tall));
 
 
 
