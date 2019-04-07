@@ -13,6 +13,8 @@ public class Toarrayer
     System.out.println("Etter å ha endret på rader og kolonner : ");
     endre_rad_og_kolonne(array);
 
+    true_false_2D_array();
+
 
 
   }
@@ -72,4 +74,57 @@ public class Toarrayer
         System.out.println();
       }
   }
+
+  public static void true_false_2D_array()
+  {
+    int temp = 3;
+    boolean[][] Array = new boolean[temp][temp];
+
+    for(int i = 0; i < temp; i++)
+    {
+      for(int j = 0; j < temp; j++)
+      {
+        /*Fyller arrayen med "true" så lenge resten etter isPrime(i,j) == 1.
+        Primtall er kun delelig med seg selv eller 1. */
+        /*De 8 første iterasjonene vil resultere i true, mens den 9 vil resultere i false. Da er i < temp false.*/
+        
+        Array[i][j] = isPrime(i,j) == 1;
+        System.out.println(Array[i][j] + " ");
+      }
+      System.out.println();
+    }
+  }
+
+  public static int isPrime(int nummer_1, int nummer_2)
+  {
+    /*Rekursiv metode */
+    //Sjekker om nr 1 eller 2 er lik 0, stemmer dette returneres 1 også avsluttes programmet.
+
+    if(nummer_1 == 0 || nummer_2 == 0)
+    {
+      return 1;
+    }
+
+    //Hvis forste nummer er mindre enn andre, så kjører vi en operasjon for å sørge for at
+    //andre tall blir mindre enn forste tall. Deretter fortsetter vi videre med å kalkulere rest.
+    if(nummer_1 < nummer_2)
+    {
+      int temp = nummer_1;
+      nummer_1 = nummer_2;
+      nummer_2 = temp;
+    }
+    //Denne bestemmer om vi skal ta en rekursiv runde til.
+    //Om resten blir 0 så avsluttes programmet ved at tall nr 2 returneres som høyest fellesnevner.
+    //Er det fremdeles rest så kjøres en ny rekursiv runde for å nærme oss at resten blir 0.
+    if(nummer_1 % nummer_2 == 0)
+    {
+      return nummer_2;
+    }
+    else
+    {
+      return isPrime(nummer_2, nummer_1 % nummer_2);
+    }
+  }
+
+
 }
