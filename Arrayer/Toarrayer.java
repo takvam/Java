@@ -87,7 +87,13 @@ public class Toarrayer
         /*Fyller arrayen med "true" så lenge resten etter isPrime(i,j) == 1.
         Primtall er kun delelig med seg selv eller 1. */
         /*De 8 første iterasjonene vil resultere i true, mens den 9 vil resultere i false. Da er i < temp false.*/
-        
+
+        /*Array[0][0] = 2 stk true
+          Array[1][1] = 2 stk true
+          Array[2][2] = 2 stk true
+          Array[3][3] = 2 stk true
+          Array[4] = 1 stk false, falske ved i < temp. */
+          
         Array[i][j] = isPrime(i,j) == 1;
         System.out.println(Array[i][j] + " ");
       }
