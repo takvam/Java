@@ -190,11 +190,38 @@ public class hjelpemetoder_Arrayer
     for(int i = 0; i < a.length; i++)
     {
       sum += a[i];
-      median = sum/2;
+      median = sum/a.length;
     }
     System.out.println("Summen er lik: " + sum);
     System.out.println("Median er lik: " + median);
   }
+
+  public static int median(int[] a)
+  {
+    int median = 0;
+    int sum = 0;
+
+    for(int i = 0; i < a.length; i++)
+    {
+      sum += a[i];
+      median = sum/a.length;
+    }
+    return median;
+  }
+
+  public static void finding_larger_then_median(int[] a)
+  {
+    int median = median(a);
+
+    for(int i = 0; i < a.length; i++)
+    {
+      if(a[i] > median)
+      {
+        System.out.println("Større enn median: " + a[i]);
+      }
+    }
+  }
+
 
   public static int[] fjern_element_i_array(int[] a, int element)
   {

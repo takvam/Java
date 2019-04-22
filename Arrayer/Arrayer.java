@@ -13,6 +13,8 @@ public class Arrayer
     int[] data = {9,-20,0,30,7,40,60,8};
     int[] data2 = {0};
 
+    int[] regne_median = {2,4,6,8};
+
     int[] forste = {50,-20,0,30,40,60,12};
     int[] andre = {50, 20, 10, 20, 30, 50, 12};
 
@@ -32,6 +34,9 @@ public class Arrayer
     int antall_rotasjoner = 1;
 
     hjelpemetoder_Arrayer multi = new hjelpemetoder_Arrayer();
+
+    System.out.println("Medianen på arrayen er : " + multi.median(regne_median));
+    multi.finding_larger_then_median(regne_median);
 
     multi.multipliser_array(test,test3);
     multi.check_gruppe(gruppe);
